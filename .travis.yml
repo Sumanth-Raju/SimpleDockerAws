@@ -1,0 +1,11 @@
+sudo: required
+services:
+  - docker
+
+#before steps before deploying project
+before_install:
+  - docker build -t sumanth/dockeraws -f Dockerfile.dev .
+
+#just for running the test coverage not impo similar to sonarqube
+script:
+  - docker run sumanth/dockeraws npm run test -- --coverage
