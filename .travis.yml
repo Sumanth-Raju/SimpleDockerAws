@@ -8,7 +8,7 @@ before_install:
 
 #just for running the test coverage not impo similar to sonarqube
 script:
-  - docker run sumanth/dockeraws npm run test --watchAll=false --coverage
+  - docker run -e CI=true sumanth/dockeraws npm run test --coverage
 
 
 deploy:
