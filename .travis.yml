@@ -1,8 +1,5 @@
 sudo: required
 dist: trusty
-language: node_js
-node_js:
-  - "8.0"
 
 services:
   - docker
@@ -23,7 +20,7 @@ deploy:
   env: "Simpledockeraws-env"
 
 
-  bucket_name: "elasticbeanstalk-us-east-2-033521689035"
+  bucket: "elasticbeanstalk-us-east-2-033521689035"
   bucket_path: "simple-docker-aws"
   on:
     branch: master
