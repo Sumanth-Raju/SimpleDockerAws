@@ -27,6 +27,7 @@ deploy:
   bucket_path: "simple-docker-aws"
   on:
     branch: master
+  skip_cleanup: true
 
 after_deploy:
   - echo "deployment done!!!"
